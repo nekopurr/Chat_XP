@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>chat XP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+</head>
+
+<body>
+    <div class="window" style="width: 400px">
+        <div class="title-bar">
+            <div class="title-bar-text">Chat XP</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div>
+                <form>
+                    <input type="text" style="width: 300px;">
+                    <button id ="submit_button" type="submit">전송</button>
+                </form>
+                <div id="contents"></div>
+            </div>
+            <p id="explain">주제를 입력해주세요!</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        let $input = document.querySelector('input')
+        let $button = document.querySelector('#submit_button')
+        const p_explain = document.getElementById('explain')
+
+        let data = [{
+            "role": "system",
+            "content": "Assistant는 주어진 주제로 재미있는 이야기를 해준다."
+        }]
+
+        let url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
+
+        $button.addEventListener('click', e => {
+            e.preventDefault()
+            userInputData = $input.value
+            $input.value = ''
+
+            data.push({
+                "role": "system",
+                "content": userInputData
+            })
+
+            chatGptAPI()
+        })
+
+        function chatGptAPI() {
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+                redirect: "follow",
+            })
+                .then(res => res.json())
+                .then(res => {
+                    // console.log(res)
+                    // console.log(res.choices[0].message.content)
+                    document.querySelector('#contents').innerText = res.choices[0].message.content
+                })
+                p_explain.innerHTML='';
+
+            // 아래 코드는 fetch 성공, 실패, 통신 중 여부와 상관없이 실행됩니다. 비동기에요.
+            console.log('hello world')
+        }
+    </script>
+</body>
+
+</html>
