@@ -27,6 +27,12 @@ body {
     font-size: 60px;
     margin-left: 10%;
     margin-top: 5%;
+
+    /* 드래그 방지 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
 
 input {
