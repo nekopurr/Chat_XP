@@ -12,7 +12,7 @@ body {
 
 .flex-1 {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
 }
 
@@ -23,7 +23,10 @@ body {
 }
 
 .clock{
-    color: #3A562B;
+    color: #FFFFFF;
+    font-size: 60px;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
 input {
@@ -48,6 +51,7 @@ input {
     width: 400px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    margin-bottom: 10%;
 }
 
 .window-body {
