@@ -8,6 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    /* 드래그 방지 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
 
 .flex-1 {
@@ -27,12 +33,6 @@ body {
     font-size: 60px;
     margin-left: 10%;
     margin-top: 5%;
-
-    /* 드래그 방지 */
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
 }
 
 input {
