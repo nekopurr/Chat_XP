@@ -33,14 +33,31 @@
                     <input type="text">
                     <button id="submit_button" type="submit">전송</button>
                 </form>
-                <img class="rover" src="css/image/rover.png">
+                <!-- <img class="rover" src="css/image/rover.png"> -->
+                <!-- Trigger/Open The Modal -->
+                <button id="modalBtn">
+                    <img src="css/image/rover.png" alt="" onclick="">
+                </button>
+
+                <!-- The Modal -->
+                <div id="modal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>내용</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
     <div class="flex-3"></div>
 
-    <script src="js/clock.js"></script>
-    <script src="js/gpt.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/gpt.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script> 
+
 </body>
 
 </html>
