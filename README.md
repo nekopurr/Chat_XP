@@ -11,4 +11,4 @@
 - 모달 기능
 
 ## 2. 배포 URL
-- [URL](https://nekopurr.github.io/Ormi_Project1/)
+- https://nekopurr.github.io/Ormi_Project1/
