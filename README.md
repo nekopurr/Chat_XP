@@ -12,3 +12,6 @@
 
 ## 2. 배포 URL
 - https://nekopurr.github.io/Ormi_Project1/
+
+## 3. 페이지 UI
+![image](https://github.com/nekopurr/Ormi_Project1/assets/85627591/356b7711-2803-4cfc-b858-c163f2d1c938)
