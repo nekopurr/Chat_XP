@@ -11,7 +11,7 @@
 - 모달 기능
 
 ## 2. 배포 URL
-- [https://nekopurr.github.io/Ormi_Project1/](https://nekopurr.github.io/Chat_XP/)
+- https://nekopurr.github.io/Chat_XP/
 
 ## 3. 페이지 UI
 ![image](https://github.com/nekopurr/Ormi_Project1/assets/85627591/356b7711-2803-4cfc-b858-c163f2d1c938)
